@@ -39,12 +39,12 @@ function CreateNote({ history }) {
   return (
     <MainScreen title="Create a Note">
       <Card>
-        <Card.Header>Create a new Note</Card.Header>
+        <Card.Header>Create a new Profile</Card.Header>
         <Card.Body>
           <Form onSubmit={submitHandler}>
             {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}
             <Form.Group controlId="title">
-              <Form.Label>Title</Form.Label>
+              <Form.Label>Your name - Profession</Form.Label>
               <Form.Control
                 type="title"
                 value={title}
@@ -65,7 +65,7 @@ function CreateNote({ history }) {
             </Form.Group>
             {content && (
               <Card>
-                <Card.Header>Note Preview</Card.Header>
+                <Card.Header>Profile Preview</Card.Header>
                 <Card.Body>
                   <ReactMarkdown>{content}</ReactMarkdown>
                 </Card.Body>
@@ -77,7 +77,7 @@ function CreateNote({ history }) {
               <Form.Control
                 type="content"
                 value={category}
-                placeholder="Enter the Category"
+                placeholder="Enter role you are applying for : ex. Full Stack Developer"
                 onChange={(e) => setCategory(e.target.value)}
               />
             </Form.Group>

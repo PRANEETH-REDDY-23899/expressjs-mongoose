@@ -69,7 +69,7 @@ function SingleNote({ match, history }) {
               <ErrorMessage variant="danger">{errorDelete}</ErrorMessage>
             )}
             <Form.Group controlId="title">
-              <Form.Label>Title</Form.Label>
+              <Form.Label>Your name - Profession</Form.Label>
               <Form.Control
                 type="title"
                 placeholder="Enter the title"
@@ -90,7 +90,7 @@ function SingleNote({ match, history }) {
             </Form.Group>
             {content && (
               <Card>
-                <Card.Header>Note Preview</Card.Header>
+                <Card.Header>Profile Preview</Card.Header>
                 <Card.Body>
                   <ReactMarkdown>{content}</ReactMarkdown>
                 </Card.Body>
@@ -101,21 +101,21 @@ function SingleNote({ match, history }) {
               <Form.Label>Category</Form.Label>
               <Form.Control
                 type="content"
-                placeholder="Enter the Category"
+                placeholder="Enter role you are applying for : ex. Full Stack Developer" 
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
               />
             </Form.Group>
             {loading && <Loading size={50} />}
             <Button variant="primary" type="submit">
-              Update Note
+              Update profile
             </Button>
             <Button
               className="mx-2"
               variant="danger"
               onClick={() => deleteHandler(match.params.id)}
             >
-              Delete Note
+              Delete profile
             </Button>
           </Form>
         </Card.Body>
