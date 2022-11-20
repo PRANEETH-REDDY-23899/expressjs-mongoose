@@ -25,7 +25,7 @@ export default class Addition extends Component {
 
         event.preventDefault(); // prevent default behaviour
         //Constructing URL to send to the server.
-        const url = `http://localhost:5000/add/${this.state.firstNumber}/and/${this.state.secondNumber}`
+        const url = `https://praneethreddynakka-profile-creater-se.up.railway.app/${this.state.firstNumber}/and/${this.state.secondNumber}`
 
         //Using fetch to send a GET request to the server.
 
