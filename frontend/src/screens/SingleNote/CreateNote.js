@@ -37,7 +37,7 @@ function CreateNote({ history }) {
   useEffect(() => {}, []);
 
   return (
-    <MainScreen title="Create a Note">
+    <MainScreen title="Create a Profile">
       <Card>
         <Card.Header>Create a new Profile</Card.Header>
         <Card.Body>

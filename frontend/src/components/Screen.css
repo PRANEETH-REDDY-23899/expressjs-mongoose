@@ -15,6 +15,11 @@
   padding: 5px 10px;
   align-content: center;
 }
+.Loginclass{
+  border-radius: 10px;
+  background-color: lightslategray;
+
+}
 
 @media only screen and (min-width: 1200px) {
 }

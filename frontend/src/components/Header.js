@@ -11,6 +11,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import {} from "react-router-dom";
 import { logout } from "../actions/userActions";
+import './Screen.css'
 
 function Header({ setSearch }) {
   const dispatch = useDispatch();
@@ -49,8 +50,12 @@ function Header({ setSearch }) {
           <Nav>
             {userInfo ? (
               <>
-                <Nav.Link href="/mynotes" className='text-dark'>My Profiles</Nav.Link>
-                <NavDropdown className='text-dark'
+                <Nav.Link href="/profile" className='text-dark'>Edit-Profile</Nav.Link>
+                <Nav.Link href="/addition" className='text-dark'>Addition</Nav.Link>
+                <Nav.Link href="/news" className='text-dark'>News</Nav.Link>
+                <Nav.Link href="/sports" className='text-dark'>Sports</Nav.Link>
+                <Nav.Link href="/entertainment" className='text-dark'>Entertainment</Nav.Link>
+                <NavDropdown className='text-dark Loginclass'
                   title={`${userInfo.name}`}
                   id="collasible-nav-dropdown"
                   
@@ -73,7 +78,14 @@ function Header({ setSearch }) {
                 </NavDropdown>
               </>
             ) : (
-              <Nav.Link href="/login" className='text-dark'>Login</Nav.Link>
+              <>
+             
+              <Nav.Link href="/addition" className='text-dark'>Addition</Nav.Link>
+              <Nav.Link href="/news" className='text-dark'>News</Nav.Link>
+              <Nav.Link href="/sports" className='text-dark'>Sports</Nav.Link>
+              <Nav.Link href="/entertainment" className='text-dark'>Entertainment</Nav.Link>
+              <Nav.Link href="/login" className='text-dark Loginclass mr-0'>Login</Nav.Link>
+              </>
             )}
           </Nav>
         </Navbar.Collapse>

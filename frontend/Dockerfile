@@ -12,6 +12,7 @@ COPY package*.json ./
 
 RUN npm install --silent
 
+
 # copy local files to app folder
 COPY . .
 

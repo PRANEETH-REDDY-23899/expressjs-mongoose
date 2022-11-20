@@ -10,6 +10,12 @@ import RegisterScreen from "./screens/RegisterScreen/RegisterScreen";
 import CreateNote from "./screens/SingleNote/CreateNote";
 import { useState } from "react";
 import ProfileScreen from "./screens/ProfileScreen/ProfileScreen";
+// import Entertainment from "./components/Entertainment";
+import  Entertainment from "./components/Entertainment";
+import News from "./components/News";
+import Sports from "./components/Sports";
+import Addition from "./components/Addition";
+
 
 function App() {
   const [search, setSearch] = useState("");
@@ -30,6 +36,11 @@ function App() {
         <Route path="/note/:id" component={SingleNote} />
         <Route path="/createnote" component={CreateNote} />;
         <Route path="/profile" component={ProfileScreen} />
+        <Route path="/entertainment" component={Entertainment} />
+        <Route path="/addition" component={Addition} />
+        <Route path="/news" component={News} />
+        <Route path="/sports" component={Sports} /> 
+
       </main>
       <Footer />
     </Router>
